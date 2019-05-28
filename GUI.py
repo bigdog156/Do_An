@@ -27,7 +27,6 @@ class Example(Frame):
         choice.grid(column=0,row=1)
         return self.path
        
-
     def choice(self):
         filename = askopenfilename()
         lable=Label(self,text="",relief=RAISED)
@@ -44,8 +43,6 @@ class Example(Frame):
         nen.grid(column=1,row=4)
         
     def Nen(self):
-        
-        path = self.pathUrl()
         ht=self.h
         output_path = ht.compress()
         print("Compressed file path: " + output_path)
