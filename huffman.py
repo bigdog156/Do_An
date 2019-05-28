@@ -2,11 +2,6 @@ import heapq
 import os
 from functools import total_ordering
 
-"""
-Code for Huffman Coding, compression and decompression. 
-Explanation at http://bhrigu.me/blog/2017/01/17/huffman-coding-python-implementation/
-"""
-
 @total_ordering
 class HeapNode:
 	def __init__(self, char, freq):
@@ -159,8 +154,8 @@ class HuffmanCoding:
 
 
 	def decompress(self, input_path):
-		filename, file_extension = os.path.splitext(self.path)
-		output_path = filename + "_decompressed" + ".txt"
+		
+		output_path = "decompressed" + ".txt"
 
 		with open(input_path, 'rb') as file, open(output_path, 'w') as output:
 			bit_string = ""
